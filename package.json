@@ -1,0 +1,29 @@
+{
+  "name": "node-app",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "author": "Gustavo Pateti <gpateti@gmail.com>",
+  "license": "ISC",
+  "scripts": {
+    "babel-node": "babel-node",
+    "build": "npx babel src --out-dir dist",
+    "start": "node -r dotenv/config dist/app.js",
+    "dev": "nodemon --exec npx babel-node -r dotenv/config src/app.js",
+    "prettify": "prettier --write src/**/*.js",
+    "lint": "eslint src/**/*.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/node": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "eslint": "^8.1.0",
+    "nodemon": "^2.0.14",
+    "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "core-js": "^3.19.0",
+    "dotenv": "^10.0.0",
+    "regenerator-runtime": "^0.13.9"
+  }
+}
